@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Snake</title>
+
+    <link type="text/css" rel="stylesheet" href="rasterize.css">
+
+    <script type="text/javascript" src="gl-matrix.js"></script>
+    <script type="text/javascript" src="rasterize.js"></script>
+  </head>
+
+  <body onload="main()">
+
+    <canvas id="myImageCanvas" width="600" height="600"></canvas>
+    <canvas id="myWebGLCanvas" width="600" height="600"></canvas>
+
+    <p style="padding-left:600px; color: Black; font-size: 50px;"><strong>Snake</strong></p>
+    <p style="padding-left:600px">IF YOU HAVE TWO PLAYER, CLICK ON <button onclick = "withPlayer()" ;> PLAYER VS PLAYER</button></P>
+    <p style="padding-left:600px">IF YOU WANT TO PLAY WITH THE COMPUTER, CLICK ON <button onclick = "withComputer()" ;> PLAYER VS COMPUTER </button></P>
+
+
+    <p style="padding-left:600px">TRUN ON OR OFF COLLISION, CLICK ON <button id ="collisionButton" onclick = "collisionOrNot()" ;> Collision: On </button></P>
+    <p style="padding-left:600px">TRUN ON OR OFF Smooth Move, CLICK ON <button id ="SmoothButton" onclick = "smoothMove()" ;> Smooth Move: Off </button></P>
+    <p style="padding-left:600px">CHANGE SNAKE SPEED, CLICK ON <button onclick = "decelerate()" ;> Slow Down </button> <button style="padding-left:5px"; onclick = "accelerate()" ;> Speed Up </button></P>
+    <p id="speed" style="padding-left:600px; font-weight: bold;"> Speed: 170 MPH </p>
+
+
+    <div class="row">
+      <p class="colomn" style="padding-left:600px; font-size: 25px"> <strong>Player1 Score: <span id = "player1" >0</span></strong></p>
+      <p class="colomn" style="padding-left:50px; font-size: 25px"> <strong>Player2 Score: <span id = "player2" >0</span></strong></p>
+    </div>
+
+    <div class="row">
+      <p class="colomn" style="padding-left:600px" > <strong> Player VS. Player: </strong><br> <br> Player 1 <br><br> UP: w <br> DOWN: s <br> LEFT: a <br> RIGHT Key d</p>
+      <p class="colomn" style="padding-left:50px"><strong> </strong> <br><br> Player 2 <br><br> UP: Up <br> DOWN: DOWN <br> LEFT: LEFT <br> RIGHT:   RIGHT</p>
+      <p class="colomn" style="padding-left:50px"><strong> Player VS. Computer: </strong><br><br> UP: w <br> DOWN: s <br> LEFT: a <br> RIGHT:  d</p>
+    </div>
+    <p style="padding-left:600px">Note: You may not switch between these two modes while the game is on. Please refresh the page when you swtich the play mode</P>
+  </body>
+</html>
